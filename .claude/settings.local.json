@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sS http://localhost:5174/emprendimientos -o /tmp/empr.html)",
+      "Read(//tmp/**)",
+      "Bash(curl -sS http://localhost:5174/ceiba -o /tmp/ceiba.html)",
+      "Bash(curl -sS -o /dev/null -w \"Emprendimientos.jsx=%{http_code}\\\\nNav.jsx=%{http_code}\\\\n\" http://localhost:5174/src/pages/Emprendimientos.jsx http://localhost:5174/src/components/Nav.jsx)",
+      "Bash(curl -sS -o /dev/null -w \"video=%{http_code}\\\\nbg-regenera=%{http_code}\\\\nhistoria-one=%{http_code}\\\\n\" http://localhost:5174/assets/regenera/video.mp4 http://localhost:5174/assets/regenera/bg-regenera.png http://localhost:5174/assets/historias/historia-one.webp)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial commit: NaturaTech LAC website *)"
+    ]
+  }
+}
