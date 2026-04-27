@@ -30,22 +30,27 @@ export default function Studio() {
         scrollTrigger: { trigger: '.studio-hero', start: 'top bottom', end: 'bottom top', scrub: 0.6 },
       });
 
-      /* Giant text letter reveal */
-      document.querySelectorAll('.studio-letter').forEach((letter) => {
+      /* Hero entrance */
+      gsap.from('.studio-content-inner', {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.15,
+        ease: 'power3.out',
+      });
+
+      document.querySelectorAll('.studio-letter').forEach((letter, i) => {
         const speed = parseFloat(letter.dataset.speed) || 1;
         gsap.fromTo(letter,
           { y: 80 * speed, opacity: 0 },
           {
-            y: 0, opacity: 1, ease: 'power3.out',
-            scrollTrigger: { trigger: '.studio-hero', start: 'top 80%', end: 'top 30%', scrub: 0.6 },
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            delay: 0.08 + i * 0.04,
+            ease: 'power3.out',
           }
         );
-      });
-
-      /* Hero content reveal */
-      gsap.from('.studio-content-inner', {
-        y: 60, opacity: 0, duration: 1.2, ease: 'power3.out',
-        scrollTrigger: { trigger: '.studio-content', start: 'top 85%', toggleActions: 'play none none reverse' },
       });
 
       /* ─── GALLERY parallax ─── */

@@ -20,21 +20,28 @@ export default function Emprendimientos({ onFrameToggle }) {
         scrollTrigger: { trigger: '.regen-section', start: 'top bottom', end: 'bottom top', scrub: 0.6 },
       });
 
-      document.querySelectorAll('.regen-letter').forEach((letter) => {
+      gsap.from('.regen-content-inner', {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.15,
+        ease: 'power3.out',
+      });
+
+      document.querySelectorAll('.regen-letter').forEach((letter, i) => {
         const speed = parseFloat(letter.dataset.speed) || 1;
         gsap.fromTo(letter,
           { y: 80 * speed, opacity: 0 },
           {
-            y: 0, opacity: 1, ease: 'power3.out',
-            scrollTrigger: { trigger: '.regen-section', start: 'top 80%', end: 'top 30%', scrub: 0.6 },
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            delay: 0.08 + i * 0.04,
+            ease: 'power3.out',
           }
         );
       });
 
-      gsap.from('.regen-content-inner', {
-        y: 60, opacity: 0, duration: 1.2, ease: 'power3.out',
-        scrollTrigger: { trigger: '.regen-content', start: 'top 85%', toggleActions: 'play none none reverse' },
-      });
       gsap.to('.regen-content', {
         y: -50, opacity: 0, ease: 'none',
         scrollTrigger: { trigger: '.regen-section', start: '60% top', end: 'bottom top', scrub: 0.6 },
