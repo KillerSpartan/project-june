@@ -250,7 +250,7 @@ export default function Ceiba() {
               <span className="ceiba-heading-line ceiba-heading-accent"><span className="amp">&amp;</span> Co-Crea</span>
             </h1>
             <p className="ceiba-description">
-              Nuevas economías se están tejiendo desde las selvas, costas, ecosistemas y comunidades juntos hicimos esas visiones realidad.
+              Nuevas economías se esss están tejiendo desde las selvas, costas, ecosistemas y comunidades juntos hicimos esas visiones realidad.
             </p>
             <a href="https://www.youtube.com/watch?v=gFI3zUEc1fo" target="_blank" rel="noreferrer" className="btn-glass">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polygon points="5,3 19,12 5,21" /></svg>
