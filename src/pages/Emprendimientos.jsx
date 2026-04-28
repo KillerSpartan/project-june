@@ -3,6 +3,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import GlassFrame from '../components/GlassFrame.jsx';
 
+const REGENERA_VIDEO_SRC = import.meta.env.VITE_REGENERA_VIDEO_URL?.trim() || '/assets/regenera/regenera.mp4';
+
 export default function Emprendimientos({ onFrameToggle }) {
   const rootRef = useRef(null);
   const videoRef = useRef(null);
@@ -172,7 +174,7 @@ export default function Emprendimientos({ onFrameToggle }) {
         <video
           ref={videoRef}
           className="regen-video"
-          src="/assets/regenera/regenera.mp4"
+          src={REGENERA_VIDEO_SRC}
           muted={muted}
           loop
           playsInline
