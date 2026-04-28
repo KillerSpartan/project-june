@@ -36,8 +36,8 @@ export default function Nav() {
           <GlassFrame
             cornerRadius={999}
             className="nav-pill-glass"
-            displacementScale={60}
-            blurAmount={0.09}
+            displacementScale={26}
+            blurAmount={1}
             saturation={130}
             aberrationIntensity={1.5}
             elasticity={0.2}
