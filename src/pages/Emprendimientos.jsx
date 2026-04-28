@@ -172,7 +172,7 @@ export default function Emprendimientos({ onFrameToggle }) {
         <video
           ref={videoRef}
           className="regen-video"
-          src="/assets/regenera/video.mp4"
+          src="/assets/regenera/regenera.mp4"
           muted={muted}
           loop
           playsInline
